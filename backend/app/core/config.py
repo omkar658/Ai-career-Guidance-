@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     jwt_expiration_hours: int = 24 * 7  # 7 days
 
     # CORS settings
-    allowed_origins: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000"
+    allowed_origins: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,https://ai-career-guidance-eight.vercel.app,https://ai-career-guidance-4zqo.onrender.com"
 
     # Rate limiting
     rate_limit_requests: int = 100
