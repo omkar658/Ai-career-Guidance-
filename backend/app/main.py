@@ -30,6 +30,7 @@ def parse_cors_origins(origins_str: str) -> list[str]:
         return ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:8000"]
     return [origin.strip() for origin in origins_str.split(',') if origin.strip()]
 
+print(f"DEBUG: Allowed Origins from settings: {settings.allowed_origins}")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=parse_cors_origins(settings.allowed_origins),
